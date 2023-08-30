@@ -10,4 +10,6 @@ public interface CustomerDAO {
     Optional<Customer> findById(int id);
 
     void saveCustomer(Customer customer);
+
+    boolean existCustomerByEmail(String email);
 }
