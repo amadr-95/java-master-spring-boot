@@ -31,4 +31,9 @@ public class CustomerListDataAccessService implements CustomerDAO {
                 .filter(customer -> customer.getId() == customerId)
                 .findFirst();
     }
+
+    @Override
+    public void saveCustomer(Customer customer) {
+        customers.add(customer);
+    }
 }
