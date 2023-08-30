@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/java-master-class-course
+    url: jdbc:postgresql://localhost:5432/customer
     username: postgres
     password: 123456
   jpa:
