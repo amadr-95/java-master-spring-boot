@@ -19,7 +19,7 @@ public class CustomerDataAccessService implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> getAllCostumers() {
+    public List<Customer> getAllCustomers() {
             return customers;
     }
 

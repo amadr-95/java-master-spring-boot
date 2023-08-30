@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public interface CustomerDAO {
 
-    List<Customer> getAllCostumers();
+    List<Customer> getAllCustomers();
 
     Optional<Customer> findById(int id);
 }
