@@ -68,7 +68,7 @@ public class Customer {
         this.email = email;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
