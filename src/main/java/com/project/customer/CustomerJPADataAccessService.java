@@ -19,7 +19,7 @@ public class CustomerJPADataAccessService implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> getAllCostumers() {
+    public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
 
