@@ -12,12 +12,14 @@ import java.util.Optional;
 public class CustomerListDataAccessService implements CustomerDAO {
 
     private static final List<Customer> customers;
+    private static int id;
 
     static {
         customers = new ArrayList<>(List.of(
                 new Customer(1, "Alex", "alex@gmail.com", 25),
                 new Customer(2, "Jamila", "jamila@gmail.com", 18)
         ));
+        id = 2;
     }
 
     @Override
@@ -34,6 +36,7 @@ public class CustomerListDataAccessService implements CustomerDAO {
 
     @Override
     public void saveCustomer(Customer customer) {
+        customer.setId(++id);
         customers.add(customer);
     }
 
