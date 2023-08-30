@@ -1,10 +1,8 @@
 package com.project.customer;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.*;
+
 import static jakarta.persistence.GenerationType.SEQUENCE;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
 
 import java.util.Objects;
 
@@ -20,8 +18,14 @@ public class Customer {
             generator = "customer_id_sequence"
     )
     private Integer id;
+
+    @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private Integer age;
 
     public Customer(int id, String name, String email, int age) {
