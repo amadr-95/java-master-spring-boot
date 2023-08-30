@@ -1,6 +1,6 @@
-# Spring Data JPA
+# Spring Data JPA (GET)
 
-![schema](src/main/resources/images/schema.png)
+![schema](src/main/resources/images/get.png)
 
 We have two implementations of CustomerDAO:
 
