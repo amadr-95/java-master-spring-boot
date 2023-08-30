@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.project</groupId>
-    <artifactId>java-master-spring-boot-customer</artifactId>
+    <artifactId>java-master-spring-boot</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>java-master-spring-boot-customer</name>
+    <name>java-master-spring-boot</name>
 
     <properties>
         <java.version>17</java.version>
