@@ -1,11 +1,6 @@
 package com.project.customer;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,5 +27,10 @@ public class CustomerController {
     @PostMapping
     public void saveCustomer(@RequestBody Customer customer) {
         customerService.saveCustomer(customer);
+    }
+
+    @DeleteMapping("{customerId}")
+    public void deleteCustomer(@PathVariable(name = "customerId") int customerId) {
+        customerService.deleteCustomer(customerId);
     }
 }

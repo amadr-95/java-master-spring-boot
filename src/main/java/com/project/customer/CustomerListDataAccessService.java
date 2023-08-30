@@ -23,7 +23,7 @@ public class CustomerListDataAccessService implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> getAllCostumers() {
+    public List<Customer> getAllCustomers() {
             return customers;
     }
 
@@ -44,5 +44,19 @@ public class CustomerListDataAccessService implements CustomerDAO {
     public boolean existCustomerByEmail(String email) {
         return customers.stream()
                 .anyMatch(customer -> customer.getEmail().equals(email));
+    }
+
+    @Override
+    public boolean existCustomerById(int id) {
+        return customers.stream()
+                .anyMatch(customer -> customer.getId() == id);
+    }
+
+    @Override
+    public void deleteById(int id) {
+        customers.stream()
+                .filter(customer -> customer.getId() == id)
+                .findFirst()
+                .ifPresent(customers::remove);
     }
 }

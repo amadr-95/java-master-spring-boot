@@ -19,7 +19,7 @@ public class CustomerJPADataAccessService implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> getAllCostumers() {
+    public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
 
@@ -36,5 +36,15 @@ public class CustomerJPADataAccessService implements CustomerDAO {
     @Override
     public boolean existCustomerByEmail(String email) {
         return customerRepository.existCustomerByEmail(email);
+    }
+
+    @Override
+    public boolean existCustomerById(int id) {
+        return customerRepository.existCustomerById(id);
+    }
+
+    @Override
+    public void deleteById(int id) {
+        customerRepository.deleteById(id);
     }
 }

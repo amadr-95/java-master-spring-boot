@@ -16,7 +16,7 @@ public class CustomerService {
     }
 
     public List<Customer> getAllCostumers() {
-        return customerDAO.getAllCostumers();
+        return customerDAO.getAllCustomers();
     }
 
     public Customer findById(int customerId) {
@@ -29,5 +29,13 @@ public class CustomerService {
         if(customerDAO.existCustomerByEmail(customer.getEmail()))
             throw new DuplicateResourceException("email already exist");
         customerDAO.saveCustomer(customer);
+    }
+
+    public void deleteCustomer(int customerId) {
+        //check if customer exists
+        //findById(customerId);
+        if(!customerDAO.existCustomerById(customerId))
+            throw new ResourceNotFoundException("customer with id [%s] does not exist".formatted(customerId));
+        customerDAO.deleteById(customerId);
     }
 }
