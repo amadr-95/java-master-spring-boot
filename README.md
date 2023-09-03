@@ -13,3 +13,10 @@ The moment a class needs one of those dependencies,
 
 In earlier versions of Spring it was also required to write `@Autowired` annotation on the
 constructor, but now it is no longer needed.
+
+## Check out branches
+- `git checkout master`
+- `git checkout postgres-db-get`
+- `git checkout postgres-db-post`
+- `git checkout postgres-db-delete`
+- `git checkout postgres-db-put`
